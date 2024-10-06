@@ -1,0 +1,237 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 24px;
+}
+.logo h1:hover {
+    color: #f4a261; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+} 
+
+/* Hover effect on nav links */
+nav ul li a:hover {
+    color: #f4a261;
+} 
+ /* Custom styles for the navbar */
+
+/* Hero Section */
+.hero-section {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+}
+
+.hero-text p {
+    font-size: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on call-to-action button */
+.cta-button:hover {
+    background-color: #e76f51;
+    transform: scale(1.05);
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-box {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on service boxes */
+.service-box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.service-box h3 {
+    margin-bottom: 20px;
+}
+
+.service-box p {
+    font-size: 16px;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+}
+
+#gallery h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on gallery images */
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on form button */
+form button:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        font-size: 16px;
+    }
+}
